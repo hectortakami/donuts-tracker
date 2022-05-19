@@ -1,1 +1,25 @@
+@use "themes" as *;
+
+@use "@nebular/theme/styles/globals" as *;
+
+@include nb-install() {
+  @include nb-theme-global();
+}
 /* You can add global styles to this file, and also import other style files */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: 0);
+  border-radius: 10px;
+  margin-left: 200px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b18aff;
+  border-radius: 10px;
+}
