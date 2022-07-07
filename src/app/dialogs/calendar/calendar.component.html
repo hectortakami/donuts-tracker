@@ -1,0 +1,22 @@
+<nb-card>
+  <nb-card-header>
+    <h1 class="h5">Fecha seleccionada: {{ date | date }}</h1>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-calendar [(date)]="date" [boundingMonth]="false" da> </nb-calendar>
+  </nb-card-body>
+  <nb-card-footer>
+    <button
+      [disabled]="isPreviousDay(date) || isWeekend(date)"
+      nbButton
+      hero
+      shape="round"
+      status="success"
+      fullWidth
+      size="large"
+      (click)="submit()"
+    >
+      Agendar
+    </button>
+  </nb-card-footer>
+</nb-card>
